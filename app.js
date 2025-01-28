@@ -17,7 +17,15 @@ function adicionarAmigo() {
   nomeAmigoInput.value = "";
 }
 
-function sortearAmigo() {}
+function sortearAmigo() {
+  if (amigos.length <= 0) return;
+
+  let randomIndex = Math.floor(Math.random() * amigos.length);
+
+  let result = `Seu amigo secreto é ${amigos[randomIndex]}`;
+
+  document.getElementById('resultado').innerHTML = result;
+}
 
 function mostrarAmigo() {
   let nameList = document.getElementById("listaAmigos");
